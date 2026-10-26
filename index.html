@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#f6f4ef">
+  <meta name="description" content="오늘의 말씀을 읽고, 천천히 묵상하고, 한 줄로 기록하는 청년 QT 공간입니다.">
+  <title>오늘, 말씀 곁에</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Noto+Sans+KR:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="page-shell">
+    <header class="topbar">
+      <a class="brand" href="#top" aria-label="오늘, 말씀 곁에 홈">
+        <span class="brand-mark" aria-hidden="true"><span></span><span></span><span></span></span>
+        <span>말씀 곁에</span>
+      </a>
+      <button class="date-chip" id="dateButton" type="button" aria-label="오늘 날짜">
+        <span class="calendar-icon" aria-hidden="true">▦</span><span id="todayDate"></span>
+      </button>
+    </header>
+
+    <section class="hero" id="top">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="eyebrow-dot"></span> DAILY QUIET TIME</p>
+        <h1>오늘, 말씀 곁에<br><em>잠시 머물러요.</em></h1>
+        <p class="hero-sub">서두르지 않아도 괜찮아요.<br>한 구절, 한 걸음이면 충분해요.</p>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <div class="sun"></div><div class="hill hill-back"></div><div class="hill hill-front"></div>
+        <div class="sprig"><i></i><i></i><i></i><i></i><b></b></div>
+      </div>
+      <div class="hero-bottom"><span>오늘의 QT</span><span class="hero-line"></span><span class="hero-small">천천히 읽고 깊이 머물기</span></div>
+    </section>
+
+    <section class="reading-section" aria-labelledby="reading-title">
+      <div class="section-heading">
+        <div><p class="section-kicker">TODAY'S READING</p><h2 id="reading-title">오늘의 말씀</h2></div>
+        <span class="source-badge"><span></span> 매일성경</span>
+      </div>
+      <div class="reading-card">
+        <div class="reading-card-head"><span class="book-icon" aria-hidden="true">✳</span><span>성서유니온 오늘의 본문</span><span class="external-mark" aria-hidden="true">↗</span></div>
+        <div class="source-frame-wrap">
+          <iframe id="readingFrame" title="성서유니온 오늘의 본문" src="https://sum.su.or.kr:8888/bible/today" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+          <div class="frame-note" id="frameNote">
+            <div class="note-icon" aria-hidden="true">☼</div>
+            <strong>오늘의 본문과 해설을 확인해요</strong>
+            <p>성서유니온의 공식 오늘 페이지에서 본문과 해설을 읽을 수 있어요.<br>버튼을 누르면 새 창으로 열립니다.</p>
+            <a class="source-button" href="https://sum.su.or.kr:8888/bible/today" target="_blank" rel="noopener">공식 페이지에서 읽기 <span aria-hidden="true">↗</span></a>
+          </div>
+        </div>
+        <a class="open-source" href="https://sum.su.or.kr:8888/bible/today" target="_blank" rel="noopener"><span>성서유니온에서 본문과 해설 보기</span><span class="arrow-circle" aria-hidden="true">↗</span></a>
+      </div>
+      <p class="reading-caption">본문과 해설은 성서유니온의 오늘 페이지에서 확인할 수 있어요.</p>
+    </section>
+
+    <section class="practice-section" aria-labelledby="practice-title">
+      <div class="section-heading practice-heading"><div><p class="section-kicker">A MOMENT WITH THE WORD</p><h2 id="practice-title">말씀을 마음에 담기</h2></div><span class="leaf-icon" aria-hidden="true">❋</span></div>
+      <div class="prompt-list">
+        <article class="prompt-card"><span class="prompt-number">01</span><div><h3>천천히 읽어요</h3><p>마음에 머무는 단어나 문장을 찾아보세요.</p></div><span class="prompt-symbol" aria-hidden="true">⌁</span></article>
+        <article class="prompt-card"><span class="prompt-number">02</span><div><h3>마음을 살펴요</h3><p>하나님은 오늘 나에게 무엇을 말씀하시나요?</p></div><span class="prompt-symbol" aria-hidden="true">♡</span></article>
+        <article class="prompt-card"><span class="prompt-number">03</span><div><h3>작게 실천해요</h3><p>오늘 하루에 옮길 수 있는 한 가지를 정해요.</p></div><span class="prompt-symbol" aria-hidden="true">↗</span></article>
+      </div>
+      <div class="journal-card">
+        <label for="journal">오늘의 한 줄 묵상 <span>나에게만 저장돼요</span></label>
+        <textarea id="journal" rows="3" placeholder="오늘 마음에 남은 말씀이나 기도를 적어보세요."></textarea>
+        <div class="journal-footer"><span id="saveStatus">이 기기에 자동 저장됩니다</span><span id="charCount">0 / 300</span></div>
+      </div>
+    </section>
+
+    <section class="community-note"><div class="community-icon" aria-hidden="true">✦</div><div><strong>함께 읽으면 더 오래 남아요</strong><p>마음에 남은 한 문장을 친구와 나눠보세요.</p></div><span class="community-arrow" aria-hidden="true">→</span></section>
+    <footer><span class="footer-brand">말씀 곁에</span><span>매일의 작은 머묾</span><a href="https://sum.su.or.kr:8888/bible/today" target="_blank" rel="noopener">성서유니온 오늘의 본문 ↗</a></footer>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
